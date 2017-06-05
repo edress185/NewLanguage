@@ -1,4 +1,4 @@
-// Generated from E:/NewProgLang/src\BroLanguage.g4 by ANTLR 4.6
+// Generated from E:/gitHub/NewLanguage/src\BroLanguage.g4 by ANTLR 4.6
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -57,15 +57,45 @@ public interface BroLanguageListener extends ParseTreeListener {
 	 */
 	void exitPrint(BroLanguageParser.PrintContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BroLanguageParser#initialize}.
+	 * Enter a parse tree produced by {@link BroLanguageParser#initializeVar}.
 	 * @param ctx the parse tree
 	 */
-	void enterInitialize(BroLanguageParser.InitializeContext ctx);
+	void enterInitializeVar(BroLanguageParser.InitializeVarContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BroLanguageParser#initialize}.
+	 * Exit a parse tree produced by {@link BroLanguageParser#initializeVar}.
 	 * @param ctx the parse tree
 	 */
-	void exitInitialize(BroLanguageParser.InitializeContext ctx);
+	void exitInitializeVar(BroLanguageParser.InitializeVarContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link BroLanguageParser#assignVar}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssignVar(BroLanguageParser.AssignVarContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link BroLanguageParser#assignVar}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssignVar(BroLanguageParser.AssignVarContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link BroLanguageParser#initializeMethod}.
+	 * @param ctx the parse tree
+	 */
+	void enterInitializeMethod(BroLanguageParser.InitializeMethodContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link BroLanguageParser#initializeMethod}.
+	 * @param ctx the parse tree
+	 */
+	void exitInitializeMethod(BroLanguageParser.InitializeMethodContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link BroLanguageParser#callMethod}.
+	 * @param ctx the parse tree
+	 */
+	void enterCallMethod(BroLanguageParser.CallMethodContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link BroLanguageParser#callMethod}.
+	 * @param ctx the parse tree
+	 */
+	void exitCallMethod(BroLanguageParser.CallMethodContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link BroLanguageParser#logicalOperation}.
 	 * @param ctx the parse tree

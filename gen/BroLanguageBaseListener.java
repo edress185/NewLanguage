@@ -1,4 +1,4 @@
-// Generated from E:/NewProgLang/src\BroLanguage.g4 by ANTLR 4.6
+// Generated from E:/gitHub/NewLanguage/src\BroLanguage.g4 by ANTLR 4.6
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -75,13 +75,49 @@ public class BroLanguageBaseListener implements BroLanguageListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterInitialize(BroLanguageParser.InitializeContext ctx) { }
+	@Override public void enterInitializeVar(BroLanguageParser.InitializeVarContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitInitialize(BroLanguageParser.InitializeContext ctx) { }
+	@Override public void exitInitializeVar(BroLanguageParser.InitializeVarContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAssignVar(BroLanguageParser.AssignVarContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAssignVar(BroLanguageParser.AssignVarContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterInitializeMethod(BroLanguageParser.InitializeMethodContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitInitializeMethod(BroLanguageParser.InitializeMethodContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCallMethod(BroLanguageParser.CallMethodContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCallMethod(BroLanguageParser.CallMethodContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

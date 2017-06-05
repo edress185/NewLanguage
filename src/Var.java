@@ -4,7 +4,7 @@
 public class Var {
     enum Type {TXT, NR}
 
-
+    
 
 
 

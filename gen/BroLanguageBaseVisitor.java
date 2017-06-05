@@ -1,4 +1,4 @@
-// Generated from E:/NewProgLang/src\BroLanguage.g4 by ANTLR 4.6
+// Generated from E:/gitHub/NewLanguage/src\BroLanguage.g4 by ANTLR 4.6
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -51,7 +51,28 @@ public class BroLanguageBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInitialize(BroLanguageParser.InitializeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInitializeVar(BroLanguageParser.InitializeVarContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitAssignVar(BroLanguageParser.AssignVarContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitInitializeMethod(BroLanguageParser.InitializeMethodContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitCallMethod(BroLanguageParser.CallMethodContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
