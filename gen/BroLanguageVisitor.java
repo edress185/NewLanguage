@@ -1,4 +1,4 @@
-// Generated from E:/gitHub/NewLanguage/src\BroLanguage.g4 by ANTLR 4.6
+// Generated from E:/NewProgLang/src\BroLanguage.g4 by ANTLR 4.6
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -40,29 +40,11 @@ public interface BroLanguageVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitPrint(BroLanguageParser.PrintContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BroLanguageParser#initializeVar}.
+	 * Visit a parse tree produced by {@link BroLanguageParser#initialize}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitInitializeVar(BroLanguageParser.InitializeVarContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link BroLanguageParser#assignVar}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitAssignVar(BroLanguageParser.AssignVarContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link BroLanguageParser#initializeMethod}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitInitializeMethod(BroLanguageParser.InitializeMethodContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link BroLanguageParser#callMethod}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitCallMethod(BroLanguageParser.CallMethodContext ctx);
+	T visitInitialize(BroLanguageParser.InitializeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link BroLanguageParser#logicalOperation}.
 	 * @param ctx the parse tree

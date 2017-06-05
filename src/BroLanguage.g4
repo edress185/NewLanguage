@@ -8,13 +8,10 @@ grammar BroLanguage;
 prog:  (statment ';') +;
 
 statment: mathExpr
-		|initializeVar
+		|initialize
 		|print
 		|loop
-		|assignVar
-		|ifStatment
-		|callMethod
-		|initializeMethod;
+		|ifStatment;
 
 mathExpr: '(' mathExpr ')'
 		| '-' mathExpr
@@ -22,8 +19,6 @@ mathExpr: '(' mathExpr ')'
 		|mathExpr ('+'|'-') mathExpr
 		|INT
 		|ID;
-
-
 
 logicalExpr: logicalExpr ('&&'|'|') logicalExpr
             | mathExpr logicalOperation mathExpr
@@ -37,19 +32,11 @@ logicalExpr: logicalExpr ('&&'|'|') logicalExpr
     BOOL: 'yes'|'no';
     STRING: '"' ID '"';
 	WS: [\r\n\t ]+ -> skip;
-	VAR: ('BroInt'|'BroString'|'BroBool');
 	COMMENT: '//' ~( '\r' | '\n' )* -> skip;
-	PARAM: VAR ID
-	       |VAR ID ',' PARAM;
 
 
-print     : 'broSay' (mathExpr| STRING) ;
-initializeVar: VAR ID ('=' ( BOOL| STRING| mathExpr))? ;
-assignVar: ID '=' ( BOOL| STRING| mathExpr);
-
-initializeMethod: (VAR| 'BroVoid') ID '(' PARAM? '){' prog '}';
-callMethod: ID '(' PARAM? ');';
-
+print     : 'print' (mathExpr| STRING) ;
+initialize: 'var' ID '=' ( BOOL| STRING| mathExpr) ;
 logicalOperation : ('=='|'!='|'>='|'<='|'<'|'>');
-loop: 'whileBro{' logicalExpr '){' prog'}';
+loop: 'while{' logicalExpr '){' prog'}';
 ifStatment : 'if(' logicalExpr'){' prog '}';
