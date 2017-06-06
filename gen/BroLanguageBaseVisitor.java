@@ -1,4 +1,4 @@
-// Generated from E:/NewProgLang/src\BroLanguage.g4 by ANTLR 4.6
+// Generated from E:/gitHub/NewLanguage/src\BroLanguage.g4 by ANTLR 4.6
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**

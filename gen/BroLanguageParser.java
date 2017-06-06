@@ -1,4 +1,4 @@
-// Generated from E:/NewProgLang/src\BroLanguage.g4 by ANTLR 4.6
+// Generated from E:/gitHub/NewLanguage/src\BroLanguage.g4 by ANTLR 4.6
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -18,8 +18,8 @@ public class BroLanguageParser extends Parser {
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
 		T__9=10, T__10=11, T__11=12, T__12=13, T__13=14, T__14=15, T__15=16, T__16=17, 
-		T__17=18, T__18=19, T__19=20, T__20=21, T__21=22, T__22=23, INT=24, ID=25, 
-		BOOL=26, STRING=27, WS=28, COMMENT=29;
+		T__17=18, T__18=19, T__19=20, T__20=21, T__21=22, INT=23, ID=24, BOOL=25, 
+		STRING=26, WS=27, VAR=28, COMMENT=29;
 	public static final int
 		RULE_prog = 0, RULE_statment = 1, RULE_mathExpr = 2, RULE_logicalExpr = 3, 
 		RULE_print = 4, RULE_initialize = 5, RULE_logicalOperation = 6, RULE_loop = 7, 
@@ -31,13 +31,13 @@ public class BroLanguageParser extends Parser {
 
 	private static final String[] _LITERAL_NAMES = {
 		null, "';'", "'('", "')'", "'-'", "'*'", "'/'", "'%'", "'+'", "'&&'", 
-		"'|'", "'print'", "'var'", "'='", "'=='", "'!='", "'>='", "'<='", "'<'", 
-		"'>'", "'while{'", "'){'", "'}'", "'if('"
+		"'|'", "'brossage'", "'='", "'=='", "'!='", "'>='", "'<='", "'<'", "'>'", 
+		"'whileBro{'", "'){'", "'}'", "'if('"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
 		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		"INT", "ID", "BOOL", "STRING", "WS", "COMMENT"
+		null, null, null, null, null, null, null, null, null, null, null, "INT", 
+		"ID", "BOOL", "STRING", "WS", "VAR", "COMMENT"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -136,7 +136,7 @@ public class BroLanguageParser extends Parser {
 				setState(23); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__1) | (1L << T__3) | (1L << T__10) | (1L << T__11) | (1L << T__19) | (1L << T__22) | (1L << INT) | (1L << ID))) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__1) | (1L << T__3) | (1L << T__10) | (1L << T__18) | (1L << T__21) | (1L << INT) | (1L << ID) | (1L << VAR))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -202,7 +202,7 @@ public class BroLanguageParser extends Parser {
 				mathExpr(0);
 				}
 				break;
-			case T__11:
+			case VAR:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(26);
@@ -216,14 +216,14 @@ public class BroLanguageParser extends Parser {
 				print();
 				}
 				break;
-			case T__19:
+			case T__18:
 				enterOuterAlt(_localctx, 4);
 				{
 				setState(28);
 				loop();
 				}
 				break;
-			case T__22:
+			case T__21:
 				enterOuterAlt(_localctx, 5);
 				{
 				setState(29);
@@ -609,6 +609,7 @@ public class BroLanguageParser extends Parser {
 	}
 
 	public static class InitializeContext extends ParserRuleContext {
+		public TerminalNode VAR() { return getToken(BroLanguageParser.VAR, 0); }
 		public TerminalNode ID() { return getToken(BroLanguageParser.ID, 0); }
 		public TerminalNode BOOL() { return getToken(BroLanguageParser.BOOL, 0); }
 		public TerminalNode STRING() { return getToken(BroLanguageParser.STRING, 0); }
@@ -641,11 +642,11 @@ public class BroLanguageParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(83);
-			match(T__11);
+			match(VAR);
 			setState(84);
 			match(ID);
 			setState(85);
-			match(T__12);
+			match(T__11);
 			setState(89);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
@@ -715,7 +716,7 @@ public class BroLanguageParser extends Parser {
 			{
 			setState(91);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__13) | (1L << T__14) | (1L << T__15) | (1L << T__16) | (1L << T__17) | (1L << T__18))) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__12) | (1L << T__13) | (1L << T__14) | (1L << T__15) | (1L << T__16) | (1L << T__17))) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -769,15 +770,15 @@ public class BroLanguageParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(93);
-			match(T__19);
+			match(T__18);
 			setState(94);
 			logicalExpr(0);
 			setState(95);
-			match(T__20);
+			match(T__19);
 			setState(96);
 			prog();
 			setState(97);
-			match(T__21);
+			match(T__20);
 			}
 		}
 		catch (RecognitionException re) {
@@ -824,15 +825,15 @@ public class BroLanguageParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(99);
-			match(T__22);
+			match(T__21);
 			setState(100);
 			logicalExpr(0);
 			setState(101);
-			match(T__20);
+			match(T__19);
 			setState(102);
 			prog();
 			setState(103);
-			match(T__21);
+			match(T__20);
 			}
 		}
 		catch (RecognitionException re) {
@@ -881,25 +882,25 @@ public class BroLanguageParser extends Parser {
 		"G\n\5\3\5\3\5\3\5\7\5L\n\5\f\5\16\5O\13\5\3\6\3\6\3\6\5\6T\n\6\3\7\3\7"+
 		"\3\7\3\7\3\7\3\7\5\7\\\n\7\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\3\n\3\n\3\n"+
 		"\3\n\3\n\3\n\3\n\2\4\6\b\13\2\4\6\b\n\f\16\20\22\2\6\3\2\7\t\4\2\6\6\n"+
-		"\n\3\2\13\f\3\2\20\25s\2\27\3\2\2\2\4 \3\2\2\2\6+\3\2\2\2\bF\3\2\2\2\n"+
+		"\n\3\2\13\f\3\2\17\24s\2\27\3\2\2\2\4 \3\2\2\2\6+\3\2\2\2\bF\3\2\2\2\n"+
 		"P\3\2\2\2\fU\3\2\2\2\16]\3\2\2\2\20_\3\2\2\2\22e\3\2\2\2\24\25\5\4\3\2"+
 		"\25\26\7\3\2\2\26\30\3\2\2\2\27\24\3\2\2\2\30\31\3\2\2\2\31\27\3\2\2\2"+
 		"\31\32\3\2\2\2\32\3\3\2\2\2\33!\5\6\4\2\34!\5\f\7\2\35!\5\n\6\2\36!\5"+
 		"\20\t\2\37!\5\22\n\2 \33\3\2\2\2 \34\3\2\2\2 \35\3\2\2\2 \36\3\2\2\2 "+
 		"\37\3\2\2\2!\5\3\2\2\2\"#\b\4\1\2#$\7\4\2\2$%\5\6\4\2%&\7\5\2\2&,\3\2"+
-		"\2\2\'(\7\6\2\2(,\5\6\4\7),\7\32\2\2*,\7\33\2\2+\"\3\2\2\2+\'\3\2\2\2"+
+		"\2\2\'(\7\6\2\2(,\5\6\4\7),\7\31\2\2*,\7\32\2\2+\"\3\2\2\2+\'\3\2\2\2"+
 		"+)\3\2\2\2+*\3\2\2\2,\65\3\2\2\2-.\f\6\2\2./\t\2\2\2/\64\5\6\4\7\60\61"+
 		"\f\5\2\2\61\62\t\3\2\2\62\64\5\6\4\6\63-\3\2\2\2\63\60\3\2\2\2\64\67\3"+
 		"\2\2\2\65\63\3\2\2\2\65\66\3\2\2\2\66\7\3\2\2\2\67\65\3\2\2\289\b\5\1"+
-		"\29:\5\6\4\2:;\5\16\b\2;<\5\6\4\2<G\3\2\2\2=>\7\35\2\2>?\5\16\b\2?@\7"+
-		"\35\2\2@G\3\2\2\2AB\7\34\2\2BC\5\16\b\2CD\7\34\2\2DG\3\2\2\2EG\7\34\2"+
+		"\29:\5\6\4\2:;\5\16\b\2;<\5\6\4\2<G\3\2\2\2=>\7\34\2\2>?\5\16\b\2?@\7"+
+		"\34\2\2@G\3\2\2\2AB\7\33\2\2BC\5\16\b\2CD\7\33\2\2DG\3\2\2\2EG\7\33\2"+
 		"\2F8\3\2\2\2F=\3\2\2\2FA\3\2\2\2FE\3\2\2\2GM\3\2\2\2HI\f\7\2\2IJ\t\4\2"+
 		"\2JL\5\b\5\bKH\3\2\2\2LO\3\2\2\2MK\3\2\2\2MN\3\2\2\2N\t\3\2\2\2OM\3\2"+
-		"\2\2PS\7\r\2\2QT\5\6\4\2RT\7\35\2\2SQ\3\2\2\2SR\3\2\2\2T\13\3\2\2\2UV"+
-		"\7\16\2\2VW\7\33\2\2W[\7\17\2\2X\\\7\34\2\2Y\\\7\35\2\2Z\\\5\6\4\2[X\3"+
-		"\2\2\2[Y\3\2\2\2[Z\3\2\2\2\\\r\3\2\2\2]^\t\5\2\2^\17\3\2\2\2_`\7\26\2"+
-		"\2`a\5\b\5\2ab\7\27\2\2bc\5\2\2\2cd\7\30\2\2d\21\3\2\2\2ef\7\31\2\2fg"+
-		"\5\b\5\2gh\7\27\2\2hi\5\2\2\2ij\7\30\2\2j\23\3\2\2\2\13\31 +\63\65FMS"+
+		"\2\2PS\7\r\2\2QT\5\6\4\2RT\7\34\2\2SQ\3\2\2\2SR\3\2\2\2T\13\3\2\2\2UV"+
+		"\7\36\2\2VW\7\32\2\2W[\7\16\2\2X\\\7\33\2\2Y\\\7\34\2\2Z\\\5\6\4\2[X\3"+
+		"\2\2\2[Y\3\2\2\2[Z\3\2\2\2\\\r\3\2\2\2]^\t\5\2\2^\17\3\2\2\2_`\7\25\2"+
+		"\2`a\5\b\5\2ab\7\26\2\2bc\5\2\2\2cd\7\27\2\2d\21\3\2\2\2ef\7\30\2\2fg"+
+		"\5\b\5\2gh\7\26\2\2hi\5\2\2\2ij\7\27\2\2j\23\3\2\2\2\13\31 +\63\65FMS"+
 		"[";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());

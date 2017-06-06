@@ -7,11 +7,14 @@ grammar BroLanguage;
 
 prog:  (statment ';') +;
 
-statment: mathExpr
-		|initialize
+statment: initialize
+		|assign
 		|print
 		|loop
-		|ifStatment;
+		|ifStatment
+		|initializeMethod
+		|mathExpr
+		|callMethod;
 
 mathExpr: '(' mathExpr ')'
 		| '-' mathExpr
@@ -32,11 +35,20 @@ logicalExpr: logicalExpr ('&&'|'|') logicalExpr
     BOOL: 'yes'|'no';
     STRING: '"' ID '"';
 	WS: [\r\n\t ]+ -> skip;
+	VAR: ('broolean'|'bronum'|'brotext');
 	COMMENT: '//' ~( '\r' | '\n' )* -> skip;
+	PARAM: VAR ID
+	      |VAR ID ',' PARAM;
 
 
-print     : 'print' (mathExpr| STRING) ;
-initialize: 'var' ID '=' ( BOOL| STRING| mathExpr) ;
+print     : 'brossage' '(' (mathExpr| STRING) ')' ;
+initialize: VAR ID ('=' ( BOOL| STRING| mathExpr))? ;
+assign: ID '=' ( BOOL| STRING| mathExpr);
+
+initializeMethod: (VAR|'broid') ID'(' PARAM? '){' statment '}';
+callMethod: ID(ID*);
+
+
 logicalOperation : ('=='|'!='|'>='|'<='|'<'|'>');
-loop: 'while{' logicalExpr '){' prog'}';
-ifStatment : 'if(' logicalExpr'){' prog '}';
+loop: 'whileBro{' logicalExpr '){' prog'}';
+ifStatment : 'ifBro(' logicalExpr'){' prog '}';
