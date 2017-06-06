@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e6ad539-f342-48d0-8d59-9dc696f6723f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CodeGeneratorVisitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/IndetifyVisitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/TypeVisitor.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/BroLanguage.tokens" afterPath="$PROJECT_DIR$/gen/BroLanguage.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/BroLanguageBaseListener.java" afterPath="$PROJECT_DIR$/gen/BroLanguageBaseListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/BroLanguageBaseVisitor.java" afterPath="$PROJECT_DIR$/gen/BroLanguageBaseVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/BroLanguageLexer.java" afterPath="$PROJECT_DIR$/gen/BroLanguageLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/BroLanguageLexer.tokens" afterPath="$PROJECT_DIR$/gen/BroLanguageLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/BroLanguageListener.java" afterPath="$PROJECT_DIR$/gen/BroLanguageListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/BroLanguageParser.java" afterPath="$PROJECT_DIR$/gen/BroLanguageParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/BroLanguageVisitor.java" afterPath="$PROJECT_DIR$/gen/BroLanguageVisitor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BroLanguage.g4" afterPath="$PROJECT_DIR$/src/BroLanguage.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scope.java" afterPath="$PROJECT_DIR$/src/Scope.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Var.java" afterPath="$PROJECT_DIR$/src/Var.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Checker.java" afterPath="$PROJECT_DIR$/src/Checker.java" />
     </list>
     <ignored path="NewProgLang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,15 +25,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="BroLanguage.g4" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BroLanguage.g4" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BroLanguage.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-              <folding>
-                <marker date="1496759915367" expanded="true" signature="702:736" ph=":...;" />
-                <marker date="1496759915367" expanded="true" signature="851:886" ph=":...;" />
-              </folding>
+            <state relative-caret-position="294">
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,16 +119,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BroLanguageBaseVisitor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gen/BroLanguageBaseVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="25" column="38" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CodeGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CodeGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -158,25 +132,12 @@
       <file leaf-file-name="Checker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Checker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="396">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
-                <element signature="e#175#176#0" expanded="true" />
-                <element signature="e#218#219#0" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
-                <element signature="e#353#354#0" expanded="true" />
-                <element signature="e#441#442#0" expanded="true" />
-                <element signature="e#488#489#0" expanded="true" />
-                <element signature="e#582#583#0" expanded="true" />
-                <element signature="e#632#633#0" expanded="true" />
-                <element signature="e#714#715#0" expanded="true" />
-                <element signature="e#758#759#0" expanded="true" />
-                <element signature="e#850#851#0" expanded="true" />
-                <element signature="e#899#900#0" expanded="true" />
-                <element signature="e#1138#1139#0" expanded="true" />
-                <element signature="e#1181#1182#0" expanded="true" />
-                <element signature="e#1273#1274#0" expanded="true" />
-                <element signature="e#1322#1323#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#347#348#0" expanded="true" />
+                <element signature="e#412#413#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -213,11 +174,11 @@
         <option value="$PROJECT_DIR$/src/TypeVisitor.java" />
         <option value="$PROJECT_DIR$/gen/BroLanguage.tokens" />
         <option value="$PROJECT_DIR$/src/Var.java" />
-        <option value="$PROJECT_DIR$/src/BroLanguage.g4" />
         <option value="$PROJECT_DIR$/src/Method.java" />
         <option value="$PROJECT_DIR$/src/Scope.java" />
         <option value="$PROJECT_DIR$/src/CodeGenerator.java" />
         <option value="$PROJECT_DIR$/src/Checker.java" />
+        <option value="$PROJECT_DIR$/src/BroLanguage.g4" />
       </list>
     </option>
   </component>
@@ -228,8 +189,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="915" />
-    <option name="width" value="1013" />
+    <option name="x" value="952" />
+    <option name="width" value="976" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -261,52 +222,7 @@
       <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewLanguage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewLanguage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewLanguage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewLanguage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewLanguage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewLanguage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewLanguage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -806,15 +722,15 @@
       <workItem from="1496573830579" duration="14316000" />
       <workItem from="1496676771388" duration="127000" />
       <workItem from="1496676971845" duration="218000" />
-      <workItem from="1496756440869" duration="5834000" />
+      <workItem from="1496756440869" duration="11043000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25483000" />
+    <option name="totallyTimeSpent" value="30692000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="915" y="0" width="1013" height="1038" extended-state="0" />
+    <frame x="952" y="0" width="976" height="1038" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -829,7 +745,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16613418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13858093" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33218786" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -910,10 +826,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <marker date="1496759915367" expanded="true" signature="702:736" ph=":...;" />
-            <marker date="1496759915367" expanded="true" signature="851:886" ph=":...;" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,10 +923,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <marker date="1496759915367" expanded="true" signature="702:736" ph=":...;" />
-            <marker date="1496759915367" expanded="true" signature="851:886" ph=":...;" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,10 +1020,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1496759915367" expanded="true" signature="702:736" ph=":...;" />
-            <marker date="1496759915367" expanded="true" signature="851:886" ph=":...;" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1121,10 +1028,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1496759915367" expanded="true" signature="702:736" ph=":...;" />
-            <marker date="1496759915367" expanded="true" signature="851:886" ph=":...;" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1132,10 +1036,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1496759915367" expanded="true" signature="702:736" ph=":...;" />
-            <marker date="1496759915367" expanded="true" signature="851:886" ph=":...;" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1159,14 +1060,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1200,17 +1093,6 @@
             <element signature="e#439#440#0" expanded="true" />
             <element signature="e#468#469#0" expanded="true" />
             <element signature="e#495#496#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BroLanguage.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding>
-            <marker date="1496759915367" expanded="true" signature="702:736" ph=":...;" />
-            <marker date="1496759915367" expanded="true" signature="851:886" ph=":...;" />
           </folding>
         </state>
       </provider>
@@ -1262,31 +1144,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Checker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="e#175#176#0" expanded="true" />
-            <element signature="e#218#219#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#488#489#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#1138#1139#0" expanded="true" />
-            <element signature="e#1181#1182#0" expanded="true" />
-            <element signature="e#1273#1274#0" expanded="true" />
-            <element signature="e#1322#1323#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1299,6 +1156,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="25" column="38" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Checker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BroLanguage.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding />
         </state>
       </provider>

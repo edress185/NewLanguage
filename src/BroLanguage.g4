@@ -5,50 +5,83 @@
 
 grammar BroLanguage;
 
-prog:  (statment ';') +;
+prog:  (statment) +;
 
-statment: initialize
-		|assign
-		|print
-		|loop
-		|ifStatment
-		|initializeMethod
-		|mathExpr
-		|callMethod;
+statment:
+    initializeVar                 #statmentInititalizeVar
+    |assignVar                      #statmentAssignVar
+    |print                          #statmentPrint
+    |loop                           #statmentLoop
+    |ifStatment                     #statmentIf
+    |initializeMethod               #statmentInitializeMethod
+    |callMethod                    #statmentCallMethod
+    ;
 
-mathExpr: '(' mathExpr ')'
-		| '-' mathExpr
-		|mathExpr ('*'|'/'|'%') mathExpr
-		|mathExpr ('+'|'-') mathExpr
-		|INT
-		|ID;
+mathExpr:
+    '(' mathExpr ')'
+    | '-' mathExpr
+    |mathExpr MATHOPERATORS mathExpr
+    |BRONUM
+    |ID
+    ;
 
-logicalExpr: logicalExpr ('&&'|'|') logicalExpr
-            | mathExpr logicalOperation mathExpr
-            |STRING logicalOperation STRING
-            |BOOL logicalOperation BOOL
-            |BOOL;
-
-
-	INT: '0' | [1-9][0-9]*;
-	ID: [A-Za-z] [A-Za-z0-9_]*;
-    BOOL: 'yes'|'no';
-    STRING: '"' ID '"';
-	WS: [\r\n\t ]+ -> skip;
-	VAR: ('broolean'|'bronum'|'brotext');
-	COMMENT: '//' ~( '\r' | '\n' )* -> skip;
-	PARAM: VAR ID
-	      |VAR ID ',' PARAM;
+logicalExpr:
+    leftExpr=logicalExpr ('&&'|'|') rightExpr=logicalExpr         #logicalExpressionMultiple
+    |leftMathExpr=mathExpr LOGICALOPERATORS rightMathExpr=mathExpr        #logicalExpressionMathExpr
+            ;
 
 
-print     : 'brossage' '(' (mathExpr| STRING) ')' ;
-initialize: VAR ID ('=' ( BOOL| STRING| mathExpr))? ;
-assign: ID '=' ( BOOL| STRING| mathExpr);
+value:
+    mathExpr
+    |logicalExpr
+    |BROTEXT
+    ;
 
-initializeMethod: (VAR|'broid') ID'(' PARAM? '){' statment '}';
-callMethod: ID(ID*);
+print:
+    'brossage' '(' value ')' ;
 
 
-logicalOperation : ('=='|'!='|'>='|'<='|'<'|'>');
-loop: 'whileBro{' logicalExpr '){' prog'}';
-ifStatment : 'ifBro(' logicalExpr'){' prog '}';
+initializeVar:
+    varType=VARTYPE varName=ID                      #varInitializing
+    |varType=VARTYPE varName=ID '=' value           #varInitializingAndAssigning
+    ;
+assignVar:
+    varName=ID '=' value                            #varAssigning
+    ;
+
+initializeMethod:
+    methodType=METHODTYPE methodName=ID '(' param? '){' statment '}'
+    ;
+
+callMethod:
+    ID(ID*)
+    ;
+
+param:
+    VARTYPE ID
+	|VARTYPE ID ',' param
+	;
+
+
+loop:
+    'whileBro{' condition=logicalExpr '){' prog'}'
+    ;
+
+
+ifStatment:
+    'ifBro(' condition=logicalExpr'){' prog '}'
+    ;
+
+
+LOGICALOPERATORS:('=='|'!='|'>='|'<='|'<'|'>');
+
+MATHOPERATORS:('*'|'/'|'%'|'+'|'-');
+
+ID: [A-Za-z] [A-Za-z0-9_]*;
+BRONUM:'0' | [1-9][0-9]*;
+BROOLEAN: 'yes'|'no';
+BROTEXT: '"' ID '"';
+VARTYPE: ('broolean'|'bronum'|'brotext');
+METHODTYPE: VARTYPE|'broid';
+COMMENT: '//' ~( '\r' | '\n' )* -> skip;
+WS: [\r\n\t ]+ -> skip;
